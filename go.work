@@ -2,13 +2,13 @@ go 1.20
 
 use (
 	.
-	./Exercise1-1
-	./Exercise1-2
-	./Exercise1-3
-	./Exercise1-4
-	./Exercise1-5
-	./Exercise1-6
-	./Exercise1-7
-	./Exercise1-8
-	./Exercise1-9
+	./Chapter1/Exercise1-1
+	./Chapter1/Exercise1-2
+	./Chapter1/Exercise1-3
+	./Chapter1/Exercise1-4
+	./Chapter1/Exercise1-5
+	./Chapter1/Exercise1-6
+	./Chapter1/Exercise1-7
+	./Chapter1/Exercise1-8
+	./Chapter1/Exercise1-9
 )
