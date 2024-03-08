@@ -3,6 +3,8 @@ go 1.20
 use (
 	.
 	./Chapter1/Exercise1-1
+	./Chapter1/Exercise1-10
+	./Chapter1/Exercise1-11
 	./Chapter1/Exercise1-2
 	./Chapter1/Exercise1-3
 	./Chapter1/Exercise1-4
@@ -11,5 +13,4 @@ use (
 	./Chapter1/Exercise1-7
 	./Chapter1/Exercise1-8
 	./Chapter1/Exercise1-9
-	./Chapter1/Exercise1-10
 )
