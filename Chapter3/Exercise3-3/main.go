@@ -68,11 +68,11 @@ func drawGraph(graph func(float64, float64) float64, w io.Writer) {
 			cx, cy, cz := corner(i, j+1, graph)
 			dx, dy, dz := corner(i+1, j+1, graph)
 
-			z := max(az, bz, cz, dz)
+			z := mean(az, bz, cz, dz)
 			zPercentage := heightPercentage(z, minZ, maxZ)
 			color := getColor(zPercentage)
 
-			fmt.Fprintf(w, "<polygon points='%g, %g %g, %g %g, %g %g, %g' style='fill:#%x'/>\n", ax, ay, bx, by, cx, cy, dx, dy, color)
+			fmt.Fprintf(w, "<polygon points='%g, %g %g, %g %g, %g %g, %g' style='fill:#%06x'/>\n", ax, ay, bx, by, cx, cy, dx, dy, color)
 		}
 	}
 
@@ -153,4 +153,17 @@ func min(data ...float64) float64 {
 	}
 
 	return min
+}
+
+func mean(data ...float64) float64 {
+	if len(data) == 0 {
+		return 0
+	}
+	var sum float64
+
+	for _, value := range data {
+		sum += value
+	}
+
+	return sum / float64(len(data))
 }
