@@ -36,7 +36,7 @@ func main() {
 func PopCountShift(x uint64) int {
 	count := 0
 	mask := uint64(1)
-	for i := 0; i < 64; i++ {
+	for x > 0 {
 		if x&mask > 0 {
 			count++
 		}
