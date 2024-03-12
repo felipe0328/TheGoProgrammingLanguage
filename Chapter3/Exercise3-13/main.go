@@ -5,8 +5,10 @@ import "fmt"
 
 const (
 	KiB = 1000
-	MiB = 1000 * KiB
-	GiB = 1000 * MiB
+	MiB = KiB * KiB
+	GiB = KiB * MiB
+	TiB = KiB * GiB
+	// and so on..
 )
 
 func main() {
