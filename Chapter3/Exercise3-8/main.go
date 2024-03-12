@@ -16,9 +16,9 @@ import (
 )
 
 const (
-	offsetX                = -0.043
-	offsetY                = -0.985
-	zoom                   = 1 / float64(150)
+	offsetX                = 0.2901005
+	offsetY                = 0.015000500155271
+	zoom                   = 1 / float64(599999999999999)
 	xmin, ymin, xmax, ymax = -zoom, -zoom, +zoom, +zoom
 	width, height          = 1024, 1024
 	iterations             = 200
