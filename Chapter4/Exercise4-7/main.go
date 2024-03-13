@@ -11,7 +11,6 @@ func main() {
 	inputText := []byte("This is the Ý input data.")
 	reverseUTF(inputText)
 	fmt.Println(string(inputText))
-
 }
 
 func reverseUTF(b []byte) {
