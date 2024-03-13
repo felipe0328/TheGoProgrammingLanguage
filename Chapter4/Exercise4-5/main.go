@@ -4,12 +4,12 @@ package main
 import "fmt"
 
 func main() {
-	data := []int{1, 2, 3, 3, 4, 5, 5, 6}
+	data := []string{"a", "b", "b", "data", "data", "other", "data", "final"}
 	fmt.Println(deleteAdjacentDuplicates(data))
 	fmt.Println(data)
 }
 
-func deleteAdjacentDuplicates(s []int) []int {
+func deleteAdjacentDuplicates(s []string) []string {
 	out := s[:0]
 	for i, s1 := range s {
 		if i == 0 || s1 != s[i-1] {
