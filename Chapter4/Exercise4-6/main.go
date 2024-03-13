@@ -10,19 +10,18 @@ import (
 const asciiSpace = byte(32)
 
 func main() {
-	inputText := "This is a code full of spaces \t where \n we \f can \vfind \rdifferent\n"
-	fmt.Println(inputText)
-	fmt.Println(squashSpaces(inputText))
-	fmt.Println(inputText)
+	inputText := []rune("This is a code full of spa   ces \t where \n we \f can \vfind \rdifferent\n examples  .")
+	fmt.Println(string(inputText))
+	fmt.Println(string(squashSpaces(inputText)))
+	fmt.Println(string(inputText))
 }
 
-func squashSpaces(s string) string {
-	sRune := []rune(s)
+func squashSpaces(s []rune) []rune {
 	counter := 0
 	isCurrentSpace := false
-	for _, s1 := range sRune {
-		if !unicode.IsSpace(s1) {
-			sRune[counter] = s1
+	for _, s1 := range s {
+		if !unicode.IsSpace(rune(s1)) {
+			s[counter] = s1
 			counter++
 			isCurrentSpace = false
 		} else {
@@ -30,10 +29,10 @@ func squashSpaces(s string) string {
 				continue
 			}
 			isCurrentSpace = true
-			sRune[counter] = rune(asciiSpace)
+			s[counter] = rune(asciiSpace)
 			counter++
 		}
 	}
 
-	return string(sRune[:counter])
+	return s[:counter]
 }
