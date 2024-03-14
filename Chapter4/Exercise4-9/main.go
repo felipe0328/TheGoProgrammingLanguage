@@ -6,6 +6,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"sort"
 	"strings"
 )
 
@@ -31,8 +32,18 @@ func main() {
 		words[word]++
 	}
 
+	wordNames := make([]string, 0, len(words))
+
+	for name := range words {
+		wordNames = append(wordNames, name)
+	}
+
+	sort.Slice(wordNames, func(i, j int) bool {
+		return words[wordNames[i]] > words[wordNames[j]]
+	})
+
 	fmt.Printf("Word\tFrequency\n")
-	for word, freq := range words {
-		fmt.Printf("%10s\t%2d\n", word, freq)
+	for _, word := range wordNames {
+		fmt.Printf("%10s\t%2d\n", word, words[word])
 	}
 }
