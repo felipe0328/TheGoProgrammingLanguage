@@ -40,6 +40,8 @@ func main() {
 		fmt.Println(getIssue(*owner, *repo, *issue))
 	case "create":
 		fmt.Println(createIssue(*owner, *repo))
+	case "update":
+		updateIssue()
 	default:
 		fmt.Println("Please provide an action to execute")
 	}
