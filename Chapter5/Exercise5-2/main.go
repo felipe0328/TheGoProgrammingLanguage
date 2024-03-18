@@ -36,7 +36,7 @@ func main() {
 func analizeData(resultMap map[string]int, n *html.Node) {
 	dataAtom := n.DataAtom.String()
 
-	if dataAtom != "" && dataAtom != "script" {
+	if dataAtom != "" {
 		resultMap[dataAtom]++
 	}
 
