@@ -4,6 +4,7 @@ package main
 
 import "fmt"
 
+// Elements retuns the elemens in the set as a int slice
 func (s *IntSet) Elems() []int {
 	var result []int
 	for i, word := range s.words {
